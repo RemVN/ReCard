@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 
 import org.bukkit.entity.Player;
 
+import main.java.remvn.recard.Main;
 import remvn.recard.Main;
 
 public class MySQL

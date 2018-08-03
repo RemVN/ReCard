@@ -6,8 +6,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 
+import main.java.remvn.recard.card.Card;
+import main.java.remvn.recard.card.Result;
 import org.bukkit.entity.Player;
 
+import main.java.remvn.recard.Main;
 import remvn.recard.Main;
 import remvn.recard.card.Card;
 import remvn.recard.card.Result;

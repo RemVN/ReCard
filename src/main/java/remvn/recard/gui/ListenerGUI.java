@@ -10,12 +10,14 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import net.md_5.bungee.api.ChatColor;
-import remvn.recard.card.Card;
-import remvn.recard.card.CardManager;
-import remvn.recard.card.CardPrice;
+import main.java.remvn.recard.card.Card;
+import main.java.remvn.recard.card.CardManager;
+import main.java.remvn.recard.card.CardPrice;
+import main.java.remvn.recard.card.CardType;
+import main.java.remvn.recard.card.Request;
+import main.java.remvn.recard.card.RequestType;
 import remvn.recard.card.CardType;
-import remvn.recard.card.Request;
-import remvn.recard.card.RequestType;
+import remvn.recard.gui.GUIHolder;
 
 public class ListenerGUI implements Listener {
 	

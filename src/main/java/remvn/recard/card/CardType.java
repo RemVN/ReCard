@@ -2,13 +2,13 @@ package remvn.recard.card;
 
 import java.util.Arrays;
 
+import main.java.remvn.recard.config.ConfigType;
+import main.java.remvn.recard.utils.ItemStackUtils;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-import remvn.recard.config.Config;
-import remvn.recard.config.ConfigType;
-import remvn.recard.gui.StatusCard;
-import remvn.recard.utils.ItemStackUtils;
+import main.java.remvn.recard.config.Config;
+import main.java.remvn.recard.gui.StatusCard;
 
 public enum CardType {
 	

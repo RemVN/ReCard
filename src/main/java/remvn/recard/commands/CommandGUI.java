@@ -1,18 +1,23 @@
 package remvn.recard.commands;
 
+import main.java.remvn.recard.Main;
+import main.java.remvn.recard.gui.GUIManager;
+import main.java.remvn.recard.gui.Status;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import main.java.remvn.recard.card.Card;
+import main.java.remvn.recard.card.CardManager;
+import main.java.remvn.recard.card.CardPrice;
+import main.java.remvn.recard.card.CardType;
+import main.java.remvn.recard.card.Request;
+import main.java.remvn.recard.card.RequestType;
+import main.java.remvn.recard.config.Config;
 import remvn.recard.Main;
-import remvn.recard.card.Card;
-import remvn.recard.card.CardManager;
-import remvn.recard.card.CardPrice;
-import remvn.recard.card.CardType;
-import remvn.recard.card.Request;
-import remvn.recard.card.RequestType;
+import remvn.recard.card.*;
 import remvn.recard.config.Config;
 import remvn.recard.gui.GUIManager;
 import remvn.recard.gui.Status;

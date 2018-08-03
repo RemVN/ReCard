@@ -3,11 +3,10 @@ package remvn.recard.config;
 import java.io.File;
 import java.io.IOException;
 
+import main.java.remvn.recard.Main;
+import main.java.remvn.recard.utils.Export;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
-
-import remvn.recard.Main;
-import remvn.recard.utils.Export;
 
 public class Config {
 	

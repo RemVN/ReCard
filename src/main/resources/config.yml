@@ -1,0 +1,32 @@
+ratio: 1
+#Tỉ lệ point nhận được
+
+merchant_id: xxx     
+api_user: xxx         
+api_password: xxx     
+# Các thông tin này xin
+# tại page gamebank khi đăng
+# kí hoàn tất
+
+server: wibuland
+# tên server (cho sql lưu trữ) 
+
+auto: true  
+# tự động nạp những thẻ đã lưu trữ 
+
+prefix: '§8[§bNạp thẻ§8] §f' 
+status:  
+ enable: true
+# thông báo tình trạng thẻ
+ 
+
+mysql:
+ enable: false
+ host: localhost
+ port: 3306
+ user: root
+ password: xxx
+ database: xxx
+
+#Author: RemVN 
+#Contact: fb.com/RemrezeroVN

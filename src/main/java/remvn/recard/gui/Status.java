@@ -23,11 +23,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
 import remvn.recard.Main;
 import remvn.recard.card.CardType;
-import remvn.recard.config.Config;
-import remvn.recard.config.ConfigType;
 
 public class Status {
 	
@@ -79,7 +76,7 @@ public class Status {
 		new BukkitRunnable() {
 			@Override
 			public void run() {
-				if(Boolean.valueOf(Config.getValue(ConfigType.STATUS_ENABLE))) 
+				if(Boolean.valueOf(Config.getValue(ConfigType.STATUS_ENABLE)))
 				if(!statusCards.isEmpty()) {
 					sendMessagesToServer(getStatusMessages());
 				}

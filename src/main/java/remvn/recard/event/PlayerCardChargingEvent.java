@@ -1,10 +1,12 @@
 package remvn.recard.event;
 
+import main.java.remvn.recard.card.Result;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
+import main.java.remvn.recard.card.Card;
 import remvn.recard.card.Card;
 
 public class PlayerCardChargingEvent extends Event implements Cancellable {
@@ -12,11 +14,11 @@ public class PlayerCardChargingEvent extends Event implements Cancellable {
 	private static final HandlerList handlers = new HandlerList();
     public OfflinePlayer op;
     public Card card;
-    public remvn.recard.card.Result result;
+    public Result result;
     public int point;
 //    private boolean cancelled;
     
-    public PlayerCardChargingEvent(OfflinePlayer op, Card card, remvn.recard.card.Result result, int point) {
+    public PlayerCardChargingEvent(OfflinePlayer op, Card card, Result result, int point) {
     	super();
     	this.op = op;
     	this.card = card;

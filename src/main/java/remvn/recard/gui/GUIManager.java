@@ -2,14 +2,17 @@ package remvn.recard.gui;
 
 import java.util.Arrays;
 
+import main.java.remvn.recard.card.CardPrice;
+import main.java.remvn.recard.card.CardType;
+import main.java.remvn.recard.utils.ItemStackUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import main.java.remvn.recard.Main;
 import remvn.recard.Main;
-import remvn.recard.card.CardPrice;
 import remvn.recard.card.CardType;
 import remvn.recard.utils.ItemStackUtils;
 

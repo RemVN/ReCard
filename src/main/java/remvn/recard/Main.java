@@ -2,6 +2,12 @@ package remvn.recard;
 
 import java.util.logging.Level;
 
+import main.java.remvn.recard.card.OfflineRequest;
+import main.java.remvn.recard.config.ConfigType;
+import main.java.remvn.recard.gui.ListenerGUI;
+import main.java.remvn.recard.gui.Status;
+import main.java.remvn.recard.log.Log;
+import main.java.remvn.recard.mysql.MySQL;
 import org.black_ixx.playerpoints.PlayerPoints;
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
@@ -9,6 +15,10 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import main.java.remvn.recard.commands.CommandCard;
+import main.java.remvn.recard.commands.CommandGUI;
+import main.java.remvn.recard.config.Config;
+import remvn.recard.ListenerPlayer;
 import remvn.recard.card.OfflineRequest;
 import remvn.recard.commands.CommandCard;
 import remvn.recard.commands.CommandGUI;
@@ -17,7 +27,6 @@ import remvn.recard.config.ConfigType;
 import remvn.recard.gui.ListenerGUI;
 import remvn.recard.gui.Status;
 import remvn.recard.log.Log;
-import remvn.recard.mysql.MySQL;
 
 public class Main extends JavaPlugin {
 	
@@ -61,8 +70,8 @@ public class Main extends JavaPlugin {
 			ConsoleCommandSender console = Bukkit.getConsoleSender();
 			console.sendMessage("");
 			console.sendMessage("");
-			console.sendMessage("§cKhong tim thay plugin PlayerPoints");
-			console.sendMessage("§cPlugin ReCard se bi vo hieu hoa");
+			console.sendMessage("ï¿½cKhong tim thay plugin PlayerPoints");
+			console.sendMessage("ï¿½cPlugin ReCard se bi vo hieu hoa");
 			console.sendMessage("");
 			console.sendMessage("");
 			this.setEnabled(false);
