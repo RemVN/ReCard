@@ -1,4 +1,4 @@
-package main.java.remvn.recard.gui;
+package remvn.recard.gui;
 
 import java.util.Arrays;
 
@@ -12,6 +12,9 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 import main.java.remvn.recard.Main;
+import remvn.recard.Main;
+import remvn.recard.card.CardType;
+import remvn.recard.utils.ItemStackUtils;
 
 public class GUIManager {
 	static Main main = Main.getIns();

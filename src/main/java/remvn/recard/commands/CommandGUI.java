@@ -1,4 +1,4 @@
-package main.java.remvn.recard.commands;
+package remvn.recard.commands;
 
 import main.java.remvn.recard.Main;
 import main.java.remvn.recard.gui.GUIManager;
@@ -16,6 +16,11 @@ import main.java.remvn.recard.card.CardType;
 import main.java.remvn.recard.card.Request;
 import main.java.remvn.recard.card.RequestType;
 import main.java.remvn.recard.config.Config;
+import remvn.recard.Main;
+import remvn.recard.card.*;
+import remvn.recard.config.Config;
+import remvn.recard.gui.GUIManager;
+import remvn.recard.gui.Status;
 
 public class CommandGUI implements CommandExecutor {
 	static Main main = Main.getIns();

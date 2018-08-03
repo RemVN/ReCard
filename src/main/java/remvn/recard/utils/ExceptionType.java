@@ -1,4 +1,4 @@
-package main.java.remvn.recard.utils;
+package remvn.recard.utils;
 
 public enum ExceptionType {
 	

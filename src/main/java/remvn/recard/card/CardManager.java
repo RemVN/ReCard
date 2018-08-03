@@ -1,4 +1,4 @@
-package main.java.remvn.recard.card;
+package remvn.recard.card;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -14,12 +14,12 @@ import java.net.URLConnection;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
-import main.java.remvn.recard.config.ConfigType;
 import org.bukkit.entity.Player;
 import org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder;
 
-import main.java.remvn.recard.Main;
-import main.java.remvn.recard.config.Config;
+import remvn.recard.Main;
+import remvn.recard.config.Config;
+import remvn.recard.config.ConfigType;
 
 public class CardManager {
 	public static Main main = Main.getIns();

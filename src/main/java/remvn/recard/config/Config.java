@@ -1,4 +1,4 @@
-package main.java.remvn.recard.config;
+package remvn.recard.config;
 
 import java.io.File;
 import java.io.IOException;

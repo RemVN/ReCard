@@ -1,4 +1,4 @@
-package main.java.remvn.recard.event;
+package remvn.recard.event;
 
 import main.java.remvn.recard.card.Result;
 import org.bukkit.OfflinePlayer;
@@ -7,6 +7,7 @@ import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
 import main.java.remvn.recard.card.Card;
+import remvn.recard.card.Card;
 
 public class PlayerCardChargingEvent extends Event implements Cancellable {
 	

@@ -1,5 +1,7 @@
-package main.java.remvn.recard.gui;
+package remvn.recard.gui;
 
-public class SelectCardTypeHolder extends GUIHolder  {
+import remvn.recard.gui.GUIHolder;
+
+public class SelectCardTypeHolder extends GUIHolder {
 
 }

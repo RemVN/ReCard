@@ -1,4 +1,4 @@
-package main.java.remvn.recard.card;
+package remvn.recard.card;
 
 import java.text.DecimalFormat;
 import java.text.ParseException;

@@ -1,4 +1,4 @@
-package main.java.remvn.recard.card;
+package remvn.recard.card;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,6 +7,8 @@ import com.google.gson.JsonObject;
 
 import main.java.remvn.recard.config.ConfigType;
 import main.java.remvn.recard.config.Config;
+import remvn.recard.config.Config;
+import remvn.recard.config.ConfigType;
 
 public class Card {
 	

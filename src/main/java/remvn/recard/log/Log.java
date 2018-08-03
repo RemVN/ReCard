@@ -1,4 +1,4 @@
-package main.java.remvn.recard.log;
+package remvn.recard.log;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,6 +11,9 @@ import main.java.remvn.recard.card.Result;
 import org.bukkit.entity.Player;
 
 import main.java.remvn.recard.Main;
+import remvn.recard.Main;
+import remvn.recard.card.Card;
+import remvn.recard.card.Result;
 
 
 public class Log {

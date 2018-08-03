@@ -1,4 +1,4 @@
-package main.java.remvn.recard;
+package remvn.recard;
 
 import java.util.logging.Level;
 
@@ -18,6 +18,15 @@ import org.bukkit.scheduler.BukkitRunnable;
 import main.java.remvn.recard.commands.CommandCard;
 import main.java.remvn.recard.commands.CommandGUI;
 import main.java.remvn.recard.config.Config;
+import remvn.recard.ListenerPlayer;
+import remvn.recard.card.OfflineRequest;
+import remvn.recard.commands.CommandCard;
+import remvn.recard.commands.CommandGUI;
+import remvn.recard.config.Config;
+import remvn.recard.config.ConfigType;
+import remvn.recard.gui.ListenerGUI;
+import remvn.recard.gui.Status;
+import remvn.recard.log.Log;
 
 public class Main extends JavaPlugin {
 	

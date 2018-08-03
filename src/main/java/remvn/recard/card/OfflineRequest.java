@@ -1,4 +1,4 @@
-package main.java.remvn.recard.card;
+package remvn.recard.card;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,6 +28,13 @@ import main.java.remvn.recard.Main;
 import main.java.remvn.recard.config.Config;
 import main.java.remvn.recard.gui.Status;
 import main.java.remvn.recard.log.Log;
+import remvn.recard.Main;
+import remvn.recard.config.Config;
+import remvn.recard.config.ConfigType;
+import remvn.recard.gui.Status;
+import remvn.recard.log.Log;
+import remvn.recard.utils.Export;
+import remvn.recard.utils.PlayerUtils;
 
 public class OfflineRequest {
 

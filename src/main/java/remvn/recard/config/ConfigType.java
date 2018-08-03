@@ -1,4 +1,4 @@
-package main.java.remvn.recard.config;
+package remvn.recard.config;
 
 public enum ConfigType {
 	

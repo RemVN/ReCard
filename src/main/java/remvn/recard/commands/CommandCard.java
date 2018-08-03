@@ -1,19 +1,19 @@
-package main.java.remvn.recard.commands;
+package remvn.recard.commands;
 
-import java.io.IOException;
-import java.sql.SQLException;
 
-import main.java.remvn.recard.Main;
-import main.java.remvn.recard.card.CardType;
-import main.java.remvn.recard.card.Result;
-import main.java.remvn.recard.config.ConfigType;
-import main.java.remvn.recard.gui.Status;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import remvn.recard.Main;
+import remvn.recard.card.CardType;
+import remvn.recard.card.Result;
+import remvn.recard.config.Config;
+import remvn.recard.config.ConfigType;
+import remvn.recard.gui.Status;
 
-import main.java.remvn.recard.config.Config;
+import java.io.IOException;
+import java.sql.SQLException;
 
 public class CommandCard implements CommandExecutor {
 	

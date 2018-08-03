@@ -1,4 +1,4 @@
-package main.java.remvn.recard.gui;
+package remvn.recard.gui;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,8 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import main.java.remvn.recard.card.CardType;
-import main.java.remvn.recard.config.ConfigType;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -25,9 +23,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
-import main.java.remvn.recard.Main;
-import main.java.remvn.recard.config.Config;
+import remvn.recard.Main;
+import remvn.recard.card.CardType;
 
 public class Status {
 	

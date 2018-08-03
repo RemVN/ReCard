@@ -1,4 +1,4 @@
-package main.java.remvn.recard.mysql;
+package remvn.recard.mysql;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,6 +9,7 @@ import java.util.logging.Logger;
 import org.bukkit.entity.Player;
 
 import main.java.remvn.recard.Main;
+import remvn.recard.Main;
 
 public class MySQL
 {

@@ -1,4 +1,4 @@
-package main.java.remvn.recard.card;
+package remvn.recard.card;
 
 import java.util.Arrays;
 

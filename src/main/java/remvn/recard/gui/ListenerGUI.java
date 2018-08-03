@@ -1,4 +1,4 @@
-package main.java.remvn.recard.gui;
+package remvn.recard.gui;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -16,6 +16,8 @@ import main.java.remvn.recard.card.CardPrice;
 import main.java.remvn.recard.card.CardType;
 import main.java.remvn.recard.card.Request;
 import main.java.remvn.recard.card.RequestType;
+import remvn.recard.card.CardType;
+import remvn.recard.gui.GUIHolder;
 
 public class ListenerGUI implements Listener {
 	

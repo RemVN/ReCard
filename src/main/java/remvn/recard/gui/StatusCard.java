@@ -1,6 +1,6 @@
-package main.java.remvn.recard.gui;
+package remvn.recard.gui;
 
-import main.java.remvn.recard.card.CardType;
+import remvn.recard.card.CardType;
 
 public class StatusCard {
 

@@ -1,4 +1,4 @@
-package main.java.remvn.recard.utils;
+package remvn.recard.utils;
 
 import java.util.List;
 
@@ -9,6 +9,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import main.java.remvn.recard.Main;
+import remvn.recard.Main;
 
 
 public class PlayerUtils {
