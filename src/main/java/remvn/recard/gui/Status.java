@@ -28,6 +28,8 @@ import remvn.recard.Main;
 import remvn.recard.card.CardType;
 import remvn.recard.config.Config;
 import remvn.recard.config.ConfigType;
+import remvn.recard.utils.FormatUtils;
+import remvn.recard.utils.NumberUtils;
 
 public class Status {
 	
@@ -116,13 +118,15 @@ public class Status {
 			}
 			double ratio = Double.valueOf(Config.getValue(ConfigType.RATIO));
 			if(ratio > 1) {
-				double km = (ratio - 1) * 100;
-				message.add(prefix + "§aĐang khuyến mãi §c§l" + km + "% §agiá trị nạp thẻ");
+				double km = NumberUtils.subtractUsingBigDecimalOperation(ratio, 1) * 100;
+				message.add(prefix + "§aĐang khuyến mãi §c§l" + FormatUtils.formatNonDecimalDouble(km) + "% §agiá trị nạp thẻ");
 			}
 			return message;
 		}
 		return new ArrayList<String>();
 	}
+	
+	
 	
 	public static void sendMessagesToServer(List<String> message) {
 		new BukkitRunnable() {
