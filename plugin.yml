@@ -1,0 +1,11 @@
+name: ReCard
+main: remvn.recard.Main
+version: 1.2
+commands:
+    rc:
+      description: Blank description.
+      usage: /<command>
+    napthe:
+      description: Blank description.
+      usage: /<command>
+softdepend: [PlayerPoints, SQLibrary]      
