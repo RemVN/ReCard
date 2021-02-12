@@ -14,6 +14,7 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.server.PluginDisableEvent;
 import org.bukkit.inventory.Inventory;
 
+import org.bukkit.inventory.InventoryView;
 import remvn.recard.card.CardManager;
 import remvn.recard.card.CardType;
 import remvn.recard.card.OfflineRequest;
@@ -75,38 +76,43 @@ public class ListenerPlayer implements Listener {
 				}
 				Result result = Result.formJson(resultString);
 				boolean mysql = Boolean.valueOf(Config.getValue(ConfigType.MYSQL_ENABLE));
-				boolean success = false;
-				int pointFinal = 0;
-				if (result.code == 0) {
-					int point = result.info_card / 1000;
-					point = (int) (point * Double.valueOf(Config.getValue(ConfigType.RATIO)));
-					pointFinal = point;
-					Main.playerPoints.getAPI().give(uuid, point);
-					success = true;
-					PlayerUtils.sendMessagesToServer(Arrays.asList("§8[§bDonate§8] §aNgười chơi " + op.getName()
-							+ " vừa donate §e" + request.card.cardprice.getPrice() + " VNĐ"));
-					if (p != null) {
-						p.sendMessage("§a§lNạp thành công thẻ " + request.card.cardtype.name() + " "
-								+ request.card.cardprice.getPrice() + " VNĐ");
-						p.sendMessage("§aĐã chuyển §9" + point + " point §avào tài khoản");
+				Bukkit.getScheduler().runTask(Main.getIns(), () -> {
+					boolean success = false;
+					int pointFinal = 0;
+					if (result.code == 0) {
+						int point = result.info_card / 1000;
+						point = (int) (point * Double.valueOf(Config.getValue(ConfigType.RATIO)));
+						pointFinal = point;
+						Main.playerPoints.getAPI().give(uuid, point);
+						success = true;
+						PlayerUtils.sendMessagesToServer(Arrays.asList("§8[§bDonate§8] §aNgười chơi " + op.getName()
+								+ " vừa donate §e" + request.card.cardprice.getPrice() + " VNĐ"));
+						if (p != null) {
+							p.sendMessage("§a§lNạp thành công thẻ " + request.card.cardtype.name() + " "
+									+ request.card.cardprice.getPrice() + " VNĐ");
+							p.sendMessage("§aĐã chuyển §9" + point + " point §avào tài khoản");
+						}
+					} else {
+						success = false;
+						if (p != null) {
+							p.sendMessage("§c§lLỖI: §c" + result.getMsg());
+						}
 					}
-				} else {
-					success = false;
-					if (p != null) {
-						p.sendMessage("§c§lLỖI: §c" + result.getMsg());
+					Log.writeLog(request.op.getName(), request.card, result, pointFinal, false);
+					Bukkit.getPluginManager().callEvent(new PlayerCardChargingEvent(op, request.card, result,
+							pointFinal));
+					boolean fsucc = success;
+					if (mysql) {
+						Bukkit.getScheduler().runTaskAsynchronously(Main.getIns(), () -> {
+							try {
+								main.sql.log(p, request.card.cardtype.name(), request.card.seri, request.card.pin,
+										request.card.cardprice.getPrice(), Config.getValue(ConfigType.SERVER), fsucc);
+							} catch (SQLException e1) {
+								e1.printStackTrace();
+							}
+						});
 					}
-				}
-				Log.writeLog(request.op.getName(), request.card, result, pointFinal, false);
-				Bukkit.getPluginManager().callEvent(new PlayerCardChargingEvent(op, request.card, result, pointFinal));
-				if (mysql)
-					try {
-						main.sql.log(p, request.card.cardtype.name(), request.card.seri, request.card.pin,
-								request.card.cardprice.getPrice(), Config.getValue(ConfigType.SERVER), success);
-					} catch (SQLException e1) {
-						e1.printStackTrace();
-					}
-
-				return;
+				});
 			}
 		}
 	}
@@ -117,10 +123,11 @@ public class ListenerPlayer implements Listener {
 			OfflineRequest.saveAllRequest();
 			for (Player p : Bukkit.getOnlinePlayers()) {
 				if (p.getOpenInventory() != null) {
-					Inventory inv = p.getOpenInventory().getTopInventory();
-					if (p.getName().equals("RemVN"))
-						p.sendMessage(inv.getTitle());
-					if (inv.getTitle().equals("§4§lChọn loại thẻ")) {
+					InventoryView view = p.getOpenInventory();
+					Inventory inv = view.getTopInventory();
+					if (p.getName().equals("MasterClaus"))
+						p.sendMessage(view.getTitle());
+					if (view.getTitle().equals("§4§lChọn loại thẻ")) {
 						p.closeInventory();
 					}
 				}
