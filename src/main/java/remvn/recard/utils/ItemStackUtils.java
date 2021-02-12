@@ -31,7 +31,7 @@ public class ItemStackUtils {
 	}
 	
 	public static ItemStack createDec(int type) {
-		ItemStack item = new ItemStack(Material.STAINED_GLASS_PANE);
+		ItemStack item = new ItemStack(Material.BLACK_STAINED_GLASS_PANE);
 		ItemMeta meta = item.getItemMeta();
 		meta.setDisplayName("§r");
 		item.setItemMeta(meta);

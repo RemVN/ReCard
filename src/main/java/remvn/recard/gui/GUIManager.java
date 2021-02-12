@@ -23,7 +23,7 @@ public class GUIManager {
 				inv.setItem(i, cardType.getDisplayItem(Status.getByCardType(cardType, Status.statusCards)));
 				i++;
 			}
-			ItemStack info = ItemStackUtils.createItemStack(Material.SIGN, "§aHãy chọn loại thẻ bạn muốn nạp");
+			ItemStack info = ItemStackUtils.createItemStack(Material.ACACIA_SIGN, "§aHãy chọn loại thẻ bạn muốn nạp");
 			ItemStackUtils.setLore(info, Arrays.asList("§aSau đó chọn tiếp mệnh giá" , "", "§cDo nạp thẻ không ổn định nên sẽ xảy ra" , "§cnạp thẻ chậm hoặc không nạp được nên nhớ", "§cgiữ lại thẻ dù đã nạp được hay không"));
 			inv.setItem(0, info);
 			Bukkit.getScheduler().runTask(main, () -> {
