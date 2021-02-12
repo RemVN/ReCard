@@ -77,7 +77,7 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.2.0</version>
 				<configuration>
-					<outputDirectory>G:/My Drive/Home/Dev/SERVER TEST/1.14.4/plugins</outputDirectory>
+					<outputDirectory>../tmlcore-output</outputDirectory>
 				</configuration>
 			</plugin>
 			<plugin>
